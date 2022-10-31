@@ -1,0 +1,25 @@
+///////////////////////////////////////////////////////////////
+// Nama file: perintah-while1.dart
+///////////////////////////////////////////////////////////////
+
+import 'dart:io';
+
+void main() {
+  int n, i;
+  double total = 0.0, data, rata2;
+
+  stdout.write('Masukkan jumlah data: ');
+  n = int.parse(stdin.readLineSync().toString());
+
+  i = 0;
+  while (i < n) {
+    stdout.write('Data ke-${i + 1}: ');
+    data = double.parse(stdin.readLineSync().toString());
+    total += data;
+    i++;
+  }
+
+  rata2 = total / n;
+  print('\nJumlah \t\t= $total');
+  print('Rata-rata \t= $rata2');
+}
